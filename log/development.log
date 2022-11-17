@@ -1,0 +1,8 @@
+  [1m[35m (162.9ms)[0m  [1m[35mCREATE DATABASE `tut1` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for 127.0.0.1 at 2022-11-17 17:44:05 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ale/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ale/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.9ms | Allocations: 665)
+Completed 200 OK in 33ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 6484)
+
+
