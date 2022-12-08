@@ -1,0 +1,20 @@
+
+<div>
+<% if Current.user && Current.user.rol == "Cliente"%>
+    <%= link_to 'Mis turnos', turns_path %>
+    <%= link_to 'Sacar turno', new_turn_path %>
+<% end %>
+<%= link_to "Iniciar sesión", new_session_path unless Current.user %>
+<%= link_to "Registrarse", new_user_path unless Current.user %>
+<%= link_to "Ver Perfil", user_path(Current.user.id) if Current.user %>
+<%= link_to "Cerrar sesión", session_path(Current.user.id), data:{
+    turbo_method: :delete
+} if Current.user %>
+<% if Current.user && Current.user.rol == "Admin"%>
+    <%= link_to "Sucursales", sucursals_path%>
+    <%= link_to "Usuarios", "/user"%>
+<% end %>
+
+</div>
+
+

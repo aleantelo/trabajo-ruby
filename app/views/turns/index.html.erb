@@ -1,0 +1,38 @@
+ <h1> <%= t('.title')%> </h1>
+<% if @turns.empty?%>
+   <h3> <%= t('.not_turns')%> </h3>
+<% else %>
+  <table >
+    <thead>
+      <tr>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @turns.each do |turn| %>                   
+          <tr>
+          <td><%=  I18n.l(turn.fecha, format: '%d-%b de %Y')%></td>
+          <td><%= turn.hora.strftime("%H:%M")%></td>
+          <td><%=turn.estado%></td>
+          <td>
+            <%= link_to "<button>Ver</button>".html_safe, turn_path(turn.id)%>
+          </td>
+          <% if turn.estado == "Pendiente" %>
+            <td>
+            <%= link_to "<button>Editar</button>".html_safe, edit_turn_path(turn.id)%>
+            </td>
+            <td>
+              <%= link_to "<button>Cancelar turno</button>".html_safe, turn_path(turn.id), data:{
+                turbo_method: :delete,
+                turbo_confirm: t('.confirm')
+              } %>
+            </td>
+          <% end %>
+          </td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

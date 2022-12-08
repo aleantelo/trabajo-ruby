@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+LaLoma:
+  nombre: La Loma
+  direccion: 46 nro 1234
+  telefono: 2214778896
+
+LaPlata:
+  nombre: Los Hornos
+  direccion: 137 nro 1234
+  telefono: 22145659874

@@ -1,0 +1,21 @@
+ <h1> <%= t('.title')%> </h1>
+
+<table >
+  <thead>
+    <tr>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Estado</th>
+        <th>Sucursal</th>
+    </tr>
+  </thead>
+  <tbody>           
+        <tr>
+        <td><%=  I18n.l(@turn.fecha, format: '%d-%b de %Y') %></td>
+        <td><%= @turn.hora.strftime("%H:%M") %></td>
+        <td><%= @turn.estado %></td>
+        <td><%= @turn.sucursal.nombre %></td>
+        </tr>
+  </tbody>
+</table>
+<%= link_to "<button>Volver</button>".html_safe, turns_path %>

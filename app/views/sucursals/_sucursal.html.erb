@@ -1,0 +1,32 @@
+<table >
+  <thead>
+    <tr>
+        <th>id</th>
+        <th>fecha</th>
+        <th>hora</th>
+    </tr>
+  </thead>
+  <tbody>
+     <% @sucursals.each do |sucursal| %>                   
+        <tr>
+          <td><%= sucursal.id %><td>
+          <td><%=  sucursal.nombre%></td>
+          <td><%= sucursal.direccion%></td>
+          <td><%= sucursal.telefono%></td>
+          <td>
+            <%= link_to "<button>Ver</button>".html_safe, sucursal_path(sucursal.id)%>
+          </td>
+          <td>
+            <%= link_to "<button>Editar</button>".html_safe, edit_sucursal_path(sucursal.id)%>
+          </td>
+            <td>
+              <%= link_to "<button>Eliminar</button>".html_safe, sucursal_path(sucursal.id), data:{
+                turbo_method: :delete,
+                turbo_confirm: t('.confirm')
+              } %>
+            </td>
+          </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
