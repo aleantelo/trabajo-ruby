@@ -101,7 +101,7 @@ es:
     update:
       updated: 'Turno actualizado'
     destroy:
-      destroyed: 'Turno fue cancelado'
+      destroyed: 'Turn cancelado'
 
   sucursals:
     sucursal:

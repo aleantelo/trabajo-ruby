@@ -5,16 +5,20 @@
     <tr>
         <th>Fecha</th>
         <th>Hora</th>
-        <th>Estado</th>
         <th>Sucursal</th>
+        <th>Motivo</th>
+        <th>Estado</th>
+
+
     </tr>
   </thead>
   <tbody>           
         <tr>
         <td><%=  I18n.l(@turn.fecha, format: '%d-%b de %Y') %></td>
         <td><%= @turn.hora.strftime("%H:%M") %></td>
-        <td><%= @turn.estado %></td>
         <td><%= @turn.sucursal.nombre %></td>
+        <td><%= @turn.motivo %></td>
+        <td><%= @turn.estado %></td>
         </tr>
   </tbody>
 </table>
