@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_08_164207) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_10_150445) do
+  create_table "horarios", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.time "inicio"
+    t.time "fin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sucursal_horarios", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "sucursal_id", null: false
+    t.bigint "horario_id", null: false
+    t.string "dia"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["horario_id"], name: "index_sucursal_horarios_on_horario_id"
+    t.index ["sucursal_id"], name: "index_sucursal_horarios_on_sucursal_id"
+  end
+
   create_table "sucursals", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "nombre"
     t.string "direccion"
@@ -43,6 +60,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_164207) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "sucursal_horarios", "horarios"
+  add_foreign_key "sucursal_horarios", "sucursals"
   add_foreign_key "turns", "sucursals"
   add_foreign_key "turns", "users"
 end

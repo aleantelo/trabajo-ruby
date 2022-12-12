@@ -9,7 +9,6 @@ class TurnsController < ApplicationController
     end
 
     def show
-        pp Current.user.rol
         turn
     end
 
@@ -49,7 +48,6 @@ class TurnsController < ApplicationController
 
     def turn
         @turn = Turn.find(params[:id])
-
     end
 
     

@@ -1,7 +1,33 @@
-<h1> <%= t('.title')%> </h1>
+<%= form_with(model: @sucursal) do |form| %>
+  <div>
+        <% if @sucursal.errors.any? %>
+            <div id="error_explanation">
+                <ul>
+                    <% @sucursal.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+    </div>
+  <div>
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
 
-<%= render "form", sucursal: @sucursal %>
+  <div>
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
 
-<div>
-  <%= link_to t('common.back'), sucursals_path %>
-</div>
+  <div>
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div>
+    <%= form.submit value="Aceptar"%>
+    <%= link_to "<button>Editar Horarios</button>".html_safe, horario_path(@sucursal.id) %>
+    <%= link_to "<button>Volver</button>".html_safe, sucursals_path %>
+  </div>
+<% end %>

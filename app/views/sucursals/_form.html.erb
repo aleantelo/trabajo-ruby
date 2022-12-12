@@ -10,7 +10,6 @@
             </div>
         <% end %>
     </div>
-
   <div>
     <%= form.label :nombre %>
     <%= form.text_field :nombre %>
@@ -25,6 +24,31 @@
     <%= form.label :telefono %>
     <%= form.text_field :telefono %>
   </div>
+    <div>
+        <%= form.label :lunes %>
+        <%= form.time_field :inicio_lunes %>
+        <%= form.time_field :fin_lunes %>
+    </div>
+    <div>
+        <%= form.label :martes %>
+        <%= form.time_field :inicio_martes %>
+        <%= form.time_field :fin_martes %>
+    </div>
+    <div>
+        <%= form.label :miercoles %>
+        <%= form.time_field :inicio_miercoles %>
+        <%= form.time_field :fin_miercoles %>
+    </div>
+    <div>
+        <%= form.label :jueves %>
+        <%= form.time_field :inicio_jueves %>
+        <%= form.time_field :fin_jueves %>
+    </div>
+    <div>
+        <%= form.label :viernes %>
+        <%= form.time_field :inicio_viernes %>
+        <%= form.time_field :fin_viernes %>
+    </div>
 
   <div>
     <%= form.submit value="Aceptar"%>

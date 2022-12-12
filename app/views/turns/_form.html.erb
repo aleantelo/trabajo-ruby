@@ -27,7 +27,7 @@
 
     <div>
     <%= form.label :sucursal_id %>
-    <%= form.collection_select :sucursal_id, Sucursal.where(borrado: "N").order(nombre: :asc), :id, :nombre %>
+    <%= form.collection_select :sucursal_id, Sucursal.all.order(nombre: :asc), :id, :nombre %>
   </div>
 
     <div>

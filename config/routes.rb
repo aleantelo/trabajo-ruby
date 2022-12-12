@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :sucursals, except: :show
+  resources :horarios, only: [:edit, :update, :index, :show], path: '/horarios'
+
+  resources :sucursals
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

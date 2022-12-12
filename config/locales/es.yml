@@ -109,6 +109,8 @@ es:
       delete: 'Borrar'
     index:
       title: 'Sucursales'
+    show:
+      title: "Sucursal"
     edit:
       title: 'Editar sucursal'
     create:
@@ -128,3 +130,9 @@ es:
       updated: 'Sus datos fueron actualizados con éxito'
     index:
       confirm: '¿Esta seguro?'
+    destroy:
+      destroyed: 'Cuenta eliminada correctamente'
+  
+    sucursals:
+      sucursal:
+       
