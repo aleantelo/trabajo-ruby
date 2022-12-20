@@ -8,7 +8,17 @@
 
 
 User.create([
-    {email: "cliente@gmail.com", password: "123456", rol: "Cliente"},
-    {email: "personal@gmail.com", password: "123456", rol: "Personal Bancario"},
-    {email: "admin@gmail.com", password: "123456", rol: "Admin"}
+    {
+    email: "admin@gmail.com", 
+    password: "123456",
+    rol: "Admin"},
+    {
+    email: "personal@gmail.com",
+    password: "123456",
+    rol: "Personal Bancario"},
+    {
+    email: "cliente@gmail.com", 
+    password: "123456", 
+    rol: "Cliente"
+    }
     ])
