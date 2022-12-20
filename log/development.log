@@ -5779,3 +5779,61 @@ Migrating to DeviseCreateUsers (20221220135228)
   [1m[36mTRANSACTION (107.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7853400853573209480')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users/sign_in" for ::1 at 2022-12-20 12:51:25 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 375)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.0ms | Allocations: 7771)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 436)
+  Rendered layout layouts/application.html.erb (Duration: 89.2ms | Allocations: 42464)
+Completed 200 OK in 151ms (Views: 96.4ms | ActiveRecord: 4.9ms | Allocations: 66169)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-20 12:51:30 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1107)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 223)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3565)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4159)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-12-20 12:51:37 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 256)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2211)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4683)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 5771)
+
+
+Started POST "/users" for ::1 at 2022-12-20 12:51:44 -0300
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ale@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ale@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `rol`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('ale@gmail.com', '$2a$12$trsgMI2sI/VIsyz57QtduOCD.RGOkHi1.s6/jzniiDYxgHmBJTviC', NULL, NULL, NULL, NULL, '2022-12-20 15:51:44.818711', '2022-12-20 15:51:44.818711')[0m
+  [1m[36mTRANSACTION (62.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 331ms (ActiveRecord: 63.4ms | Allocations: 9659)
+
+
+Started GET "/" for ::1 at 2022-12-20 12:51:44 -0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1323)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3742)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.8ms | Allocations: 4550)
+
+
