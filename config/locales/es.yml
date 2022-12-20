@@ -1,0 +1,8 @@
+es:
+  home:
+    index:
+      title: "Bienvenido"
+  devise:
+    sessions:
+      new:
+        title: "Inicio de sesión"
