@@ -1,4 +1,9 @@
-
-<div>
-<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
-</div>
+<% if signed_in? %>
+    <div>
+    <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+    </div>
+<% else %>
+    <div>
+    <%= link_to "Iniciar sesión", new_user_session_path, method: :delete %>
+    </div>
+<% end %>
