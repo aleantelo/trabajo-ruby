@@ -454,3 +454,92 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 14264)
 
 
+Started GET "/" for ::1 at 2022-12-20 11:05:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 314)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 91.9ms | Allocations: 34819)
+Completed 200 OK in 100ms (Views: 94.5ms | ActiveRecord: 0.0ms | Allocations: 39746)
+
+
+Started GET "/users/sign_out" for ::1 at 2022-12-20 11:05:37 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2022-12-20 11:06:03 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 64)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2479)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2728)
+
+
+Started GET "/users/sign_out" for ::1 at 2022-12-20 11:06:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2022-12-20 11:07:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2022-12-20 11:07:40 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ale/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ale/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 457)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1187)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-20 11:07:49 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 913)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 6405)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 20563)
+Completed 200 OK in 63ms (Views: 32.8ms | ActiveRecord: 5.9ms | Allocations: 39696)
+
+
+Started GET "/users/sign_out" for ::1 at 2022-12-20 11:07:51 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2022-12-20 11:15:10 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 112)
+  Rendered shared/_header.html.erb (Duration: 35.5ms | Allocations: 4297)
+  Rendered layout layouts/application.html.erb (Duration: 66.0ms | Allocations: 18208)
+Completed 500 Internal Server Error in 68ms (Allocations: 18910)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `destroy_user_session_path' for #<ActionView::Base:0x00000000015b80>
+Did you mean?  destroy_session_path):
+    1: 
+    2: <div>
+    3: <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+    4: </div>
+  
+app/views/shared/_header.html.erb:3
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2022-12-20 11:15:18 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 13875)
+Completed 200 OK in 16ms (Views: 15.4ms | Allocations: 14477)
+
+
+Started GET "/users/sign_out" for ::1 at 2022-12-20 11:15:20 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
